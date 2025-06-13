@@ -8,97 +8,115 @@ Built using [Streamlit](https://streamlit.io) and [Google Generative AI](https:/
 
 ## 🎯 Features
 
-- ✅ **Realistic test data** generation using Gemini AI
+- ✅ Realistic test data generation using Gemini AI
 - 🔒 No third-party storage — everything runs securely on your machine
-- 🧠 Intelligent prompt tuning for use-case accuracy (e.g. KYC, payments, fraud, open banking)
-- 📥 Downloadable and copyable JSON output
-- ⚙️ Scenario-specific config (amount, ID formats, etc.)
-- 💡 Extensible for ML training, QA automation, or sandboxing
+- 🧠 Scenario-specific intelligent prompt tuning (e.g. KYC, payments, fraud, open banking)
+- 📥 One-click download or copy of clean JSON data
+- ⚙️ Lightweight UI built in Streamlit
+- 🧪 Ideal for QA, sandbox testing, and ML prototyping
+- 🧬 Schema-free, bias-controlled generation
+- 🚀 Gemini 1.5 Flash or 2.0 Flash support for blazing-fast results
 
 ---
 
-## 📦 Installation
+## ⚙️ Installation & Run Guide
 
-> Tested with **Python 3.10+** on Windows, macOS, and Linux.
-
-### 🔧 1. Clone the Repository
+> 🐍 Requires **Python 3.10+**  
+> 🧪 Tested on **Windows**, **macOS**, and **Linux**
 
 ```bash
+# 1. Clone this repository
 git clone https://github.com/YOUR_USERNAME/GenTest-AI.git
 cd GenTest-AI
 
-📁 2. Create and Activate a Virtual Environment
-bash
-Copy
-Edit
+# 2. Create and activate a virtual environment
 python -m venv venv
-# On Windows
+
+# For Windows
 venv\Scripts\activate
-# On macOS/Linux
+
+# For macOS/Linux
 source venv/bin/activate
-📥 3. Install Dependencies
-bash
-Copy
-Edit
+
+# 3. Install required packages
 pip install -r requirements.txt
-🔐 4. Configure Environment Variables
-Create a .env file in the root directory:
 
-dotenv
-Copy
-Edit
+# 4. Set up Gemini API key
+# Create a `.env` file in the root directory:
 GEMINI_API_KEY=your-google-gemini-api-key-here
-✅ If you don’t have an API key yet, get one here.
 
-🚀 How to Run the App
-bash
-Copy
-Edit
+# 5. Run the app
 streamlit run app.py
-Then open the link (usually http://localhost:8501) in your browser.
+Then open http://localhost:8501 in your browser.
 
 🧪 Supported Scenarios
 Scenario	Description
 open_banking	Simulated transaction-level banking data
 kyc	Identity verification test records
-payments	Payment processing and remittance data
-fraud_detection	Suspicious activity patterns
+payments	Payment processing and remittance simulation
+fraud_detection	Suspicious activity for fraud detection models
 
 💡 Why GenTest.AI?
-🧬 Data Privacy: Generate test data without using production data
+🧬 Data Privacy: Generate 100% synthetic data — no real customer data ever used.
 
-🧪 QA Velocity: Eliminate manual test case authoring
+🧪 QA Velocity: Automate test data generation instead of crafting manually.
 
-🔗 CI/CD Friendly: Easily scriptable and GitHub Actions-compatible
+⚡ CI/CD Integration: Embed into GitHub Actions or Jenkins pipelines.
 
-🛡️ Regulatory Ready: Avoids data privacy violations (GDPR, etc.)
+🛡️ Regulatory Ready: Avoid GDPR, PCI-DSS violations by using synthetic data.
+
+🧠 AI Aligned: Ready for LLM fine-tuning and model testing.
+
+🎯 Business Use-case Focused: Covers critical banking/fintech domains.
+
+📊 Output Flexibility: JSON-first output for use in Postman, JMeter, etc.
+
+🏦 Built for Banks: Created at Lloyds Bank GenAI Hackathon with enterprise in mind.
 
 📈 Roadmap
- Add support for CSV export
+ Add support for CSV, Parquet, SQL output
 
- Prompt auto-validation & schema enforcement
+ Schema validator & JSON Schema inference
 
- Admin dashboard for saved templates
+ Admin UI to save templates and scenarios
 
- LangChain or Vertex AI pipeline support
+ LangChain and Vertex AI pipeline integrations
 
-🤝 Contribution
-Pull requests are welcome! Please submit an issue first for any major change.
-
-🛡️ License
-This project is licensed under the MIT License.
-
-🧠 Maintainers
-Developed with ❤️ for internal use at Lloyds Bank (GenAI Hackathon)
-Maintained by: @laxmantelang
-
-yaml
+📁 Project Structure
+bash
 Copy
 Edit
+GenTest-AI/
+├── app.py                # Streamlit UI
+├── .env.example          # Sample environment config
+├── requirements.txt      # Python dependencies
+├── README.md             # Project documentation
+├── .gitignore            # Ignore venv, cache, etc.
+└── venv/                 # Local environment (ignored)
 
----
 
-### 📁 Final Output
 
-Make sure these files exist in your root folder:
+
+🤝 Contribution
+Want to improve GenTest.AI or add new scenarios?
+Feel free to fork and submit a pull request. For major changes, please open an issue first to discuss.
+
+🛡️ License
+This project is licensed under the MIT License — free to use, modify, and distribute.
+
+🧠 Maintainers
+Built with ❤️ by the Lloyds Bank QA Innovation Team for the 2025 GenAI Hackathon
+Maintainer: @laxmantelang
+
+
+
+
+
+
+
+
+
+
+
+
 
